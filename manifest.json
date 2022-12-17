@@ -1,0 +1,17 @@
+{
+    "name":"EMP",
+    "short_name": "EMP",
+    "icons": [
+        {
+            "src": "./assets/icon-192.png",
+            "sizes": "192x192",
+            "type":"image/png",
+            "purpose":"any maskable"
+        }
+    ],
+    "theme_color":"#FFFFFF",
+    "background_color":"#FFFFFF",
+    "start_url":"/Musicality/",
+    "display":"standalone",
+    "orientation":"portrait"
+}
