@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Musicality</title>
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="icon" href="./assets/icon-192.png" />
+        <script src="./dexie.min.js"></script>
+        <script>
+            //Check that service workers are supported
+            if('serviceWorker' in navigator) {
+                //use the window load event to keep the page load performant
+                window.addEventListener('load',()=> {
+                    navigator.serviceWorker.register('./sw.js')
+                });
+            }
+        </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="itemForm">
+            <label >
+                Name of Item
+                <input type="text" id="nameInput" required>
+            </label>
+            <label >
+                Quantity
+                <input type="text" id="quantityInput" value=1>
+            </label>
+            <label >
+                Price
+                <input type="text" id="priceInput" value=0>
+            </label>
+            <button type="submit" id="addItemButton">Add Item</button>
+        </form>
+    </div>
+    <div id="itemsDiv"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
